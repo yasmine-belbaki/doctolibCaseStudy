@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title={title} icon-name="standard:location">
+        <div class="slds-box">  
+            <p>Enter your location :</p><br/>  
+        
+            <lightning-input label="Enter your city" name="inputCity"></lightning-input>
+            <lightning-input label="Enter your country" name="inputCountry"></lightning-input>
+             
+        </div>
+        <p slot="footer">
+            <lightning-button variant="brand"  label="Submit" onclick={handleSubmit} class="slds-m-left_x-small"></lightning-button> 
+        </p>
+    </lightning-card>
+    
+    <c-lwc_display-weather-info if:true={showWeatherComponent} cityinfo={inputCity} countryinfo={inputCountry}></c-lwc_display-weather-info>
+
+</template>

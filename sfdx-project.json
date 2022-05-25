@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "DEVDOCTO",
+  "namespace": "",
+  "sfdcLoginUrl": "https://cunning-otter-5h6xn6-dev-ed.my.salesforce.com/",
+  "sourceApiVersion": "54.0"
+}

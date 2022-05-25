@@ -1,0 +1,29 @@
+<template>
+    <lightning-card title={title} icon-name="custom:custom60">
+        <div if:true={noInfo}>
+            <div class="slds-m-horizontal_medium">
+                <p>No information available.</p>
+            </div>
+        </div>
+        <div if:false={noInfo}>
+            <lightning-layout horizontal-align="space">
+                <lightning-layout-item>
+                    <template for:each={weatherInfoList} for:item='i'>
+                        <div key={i.key}><b>{i.key} :</b>  {i.value}</div>
+                    </template>
+                </lightning-layout-item>
+                <lightning-layout-item>
+                    <div class="slds-m-around_xx-small">
+                        <img src={weatherIcon} height="100" width="100">
+                    </div>
+                </lightning-layout-item>
+            </lightning-layout>
+            <div if:true={showSendButton} class="slds-align_absolute-center">
+                <lightning-button label="Send Report" onclick={handleSendReport} disabled={disbaleSendButton}></lightning-button>
+            </div>
+            <div if:true={showSendConfirmation} style="display: inline" class="slds-align_absolute-center">
+                <div>{showSendConfirmationMsg}</div>
+            </div>
+        </div>
+    </lightning-card>
+</template>

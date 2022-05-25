@@ -1,0 +1,16 @@
+<apex:page standardStylesheets="false" showHeader="false" sideBar="false" cache="false">
+    <div id="lightning"></div>
+<script src="https://weather-observation-developer-edition.fra19.sfdc-urlt2q.force.com/lightning/lightning.out.js"></script>
+<script>
+     $Lightning.use("c:WeatherInfoApp", function() {
+        $Lightning.createComponent("c:lwc_getLocationInfo", {},
+              "lightning",
+              function(cmp) {
+                  //console.log("LWC component was created");
+              }
+          );
+        },
+       'https://weather-observation-developer-edition.fra19.sfdc-urlt2q.force.com/'
+      );
+</script>
+</apex:page>
